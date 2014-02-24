@@ -31,7 +31,7 @@ define('projectName', 'mli_baseball'); //專案名
 define('ctrl_main','main'); //controll name
 define("is_https",isset($_SERVER['HTTPS'])?"https":"http"); //自動使用者是否為安全性連線
 
-define('IMAGE_PATH','images/');
+define('IMAGE_PATH','img');
 define('MERGE_PATH','tmp/');
 define('SCOPE','user_about_me,user_likes,user_photos,read_stream');
 
