@@ -1,0 +1,613 @@
+@charset "utf-8";
+/* CSS Document */
+.bg1{
+	background:url(../img/index_bg.jpg) no-repeat;
+	width:760px;
+	height:580px;
+	margin:auto;
+	position:relative;	
+	}
+
+.inf{
+	background-image: url(../img/btn_inf.png);
+	width:105px;
+	height:40px;
+	margin-left:650px;
+	margin-top:10px;
+	position:absolute;	
+	cursor:pointer;
+}
+.go{
+	background-image: url(../img/btn_go.png);
+	width:159px;
+	height:44px;
+	margin-left:310px;
+	margin-top:519px;
+	position:absolute;
+	cursor:pointer;	
+}
+/* 二選一 */
+.bg2{
+	background:url(../img/random_bg.jpg) no-repeat;
+	width:760px;
+	height:580px;
+	margin:auto;
+	position:relative;	
+	}
+
+.rbtn{
+	float:left;
+	width:365px;
+	height:130px;
+	margin-left:210px;
+	margin-top:280px;
+	position:absolute;
+}	
+.rbtn > .btn1{
+	float:left;
+	background-image: url(../img/rbtn1.png);
+	width:150px;
+	height:93px;
+	margin-left:15px;	
+	margin-top:9px;
+	position:relative;	
+	cursor:pointer;	
+}
+.rbtn > .btn2{
+	float:left;
+	background-image: url(../img/rbtn2.png);
+	width:150px;
+	height:93px;
+	left:20px;
+	top:9px;
+	position:relative;
+	cursor:pointer;	
+}
+/* 開始選隊友 */
+.bg3{
+	background:url(../img/choose_bg.jpg) no-repeat;
+	width:760px;
+	height:580px;
+	margin:auto;
+	position:relative;	
+	}
+.bg3 >.sacker5{/*三壘*/
+	float:left;
+	width:92px;
+	height:124px;
+	top:275px;
+	left:135px;
+	position:absolute;
+	cursor:pointer;
+	}
+.bg3 >.sacker6{/*二壘*/
+	float:left;
+	width:74px;
+	height:129px;
+	top:142px;
+	left:362px;
+	position:absolute;
+	cursor:pointer;
+	}
+.bg3 >.sacker7{/*一壘*/
+	float:left;
+	width:74px;
+	height:129px;
+	top:254px;
+	left:594px;
+	position:absolute;
+	cursor:pointer;
+	}
+.bg3 >.sacker2{/*左外*/
+	float:left;
+	width:80px;
+	height:120px;
+	top:154px;
+	left:175px;
+	position:absolute;
+	cursor:pointer;
+	}
+.bg3 >.sacker4{/*右外*/
+	float:left;
+	width:74px;
+	height:129px;
+	top:137px;
+	left:501px;
+	position:absolute;
+	cursor:pointer;
+	}
+.bg3 >.mascot3{/*吉洋物*/
+	float:left;
+	width:74px;
+	height:129px;
+	top:125px;
+	left:665px;
+	position:absolute;
+	cursor:pointer;
+	}
+.bg3 >.lala{/*啦啦隊*/
+	float:left;
+	width:151px;
+	height:124px;
+	top:408px;
+	left:28px;
+	position:absolute;
+	cursor:pointer;
+	}
+.bg3 >.coach{/*安西教練*/
+	float:left;
+	width:75px;
+	height:135px;
+	top:430px;
+	left:218px;
+	position:absolute;
+	cursor:pointer;
+	}
+.bg3 >.catch9{/*捕手*/
+	float:left;
+	width:100px;
+	height:120px;
+	top:450px;
+	left:350px;
+	position:absolute;
+	cursor:pointer;
+	}
+.bg3>.user1{/*投手*/
+	float:left;
+	width:55px;
+	height:55px;
+	top:305px;
+	left:365px;
+	position:absolute;
+	}
+.bg3>.btn3{
+	float:left;
+	width:201px;
+	height:64px;
+	top:470px;
+	left:530px;
+	position:absolute;
+	cursor:pointer;
+	background-image:url(../img/btn3.png)
+	}
+
+/*結果頁*/
+.bg4{
+	background:url(../img/result_bg.jpg) no-repeat;
+	width:760px;
+	height:580px;
+	margin:auto;
+	position:relative;	
+	}
+.tittle{
+    background:url(../img/tittle.png) no-repeat;
+	width: 342px;
+	height: 55px;
+	position: absolute;
+	}
+.tittle>.t_name{
+	float: left;
+	width: 140px;
+	height: 30px;
+	font-family: 微軟正黑體; 
+	font-size: 20px;
+    text-align:left; 
+	/*border:1px solid #AAA;*/
+	/*z-index:9999;*/
+	/*visibility:hidden;*/
+	position:absolute;
+    padding: 10px;
+    }
+.bg4>.btn4{
+	float:left;
+	width:229px;
+	height:120px;
+	top:440px;
+	left:519px;
+	position:absolute;
+	cursor:pointer;
+	background-image:url(../img/btn4.png)
+	}
+.bg4>.sacker5{/*三壘*/
+	float:left;
+	width:80px;
+	height:144px;
+	top:196px;
+	left:192px;
+	position:absolute;
+	cursor:pointer;
+    }
+.sacker5 > .head{
+    width:64px;
+	height:64px;
+    top: 18px;
+    left: 11px;
+	position:absolute;
+	background-image:url(../img/bello.jpg);
+    }
+.sacker5 > .ymsg{
+    width:232px;
+	height:24px;
+    top: 100px;
+    left:-95px;
+	position:absolute;
+	background:url(../img/ymsg.png);
+    visibility:hidden;
+    z-index: 9999;
+    }
+
+.bg4>.sacker6{/*二壘*/
+	float:left;
+	width:80px;
+	height:145px;
+	top:92px;
+	left:345px;
+	position:absolute;
+	cursor:pointer;
+    }
+.sacker6> .head{
+    width:64px;
+	height:64px;
+    top: 17px;
+    left: 8px;
+	position:absolute;
+	background-image:url(../img/bello.jpg);
+    }
+.sacker6 > .ymsg{
+    width:232px;
+	height:24px;
+    top: 110px;
+    left:-65px;
+	position:absolute;
+	background:url(../img/ymsg.png);
+    visibility:hidden;
+    z-index: 9999;
+    }
+.bg4>.sacker7{/*一壘*/
+	float:left;
+	width:80px;
+	height:150px;
+	top:238px;
+	left:555px;
+	position:absolute;
+	cursor:pointer;
+   	}
+.sacker7> .head{
+    width:64px;
+	height:64px;
+    top: 19px;
+    left: 7px;
+	position:absolute;
+	background-image:url(../img/bello.jpg);
+    }
+.sacker7 > .ymsg{
+    width:232px;
+	height:24px;
+    top: 115px;
+    left:-72px;
+	position:absolute;
+	background:url(../img/ymsg.png);
+    visibility:hidden;*/
+    z-index: 9999;
+    }
+
+.bg4>.sacker2{/*左外*/
+	float:left;
+	width:80px;
+	height:150px;
+	top:62px;
+	left:102px;
+	position:absolute;
+	cursor:pointer;
+    }
+.sacker2> .head{
+    width:64px;
+	height:64px;
+    top: 16px;
+    left: 10px;
+	position:absolute;
+	background-image:url(../img/bello.jpg);
+    }
+.sacker2 > .ymsg{
+    width:232px;
+	height:24px;
+    top: 108px;
+    left:-72px;
+	position:absolute;
+	background:url(../img/ymsg.png);
+    visibility:hidden;*/
+    z-index: 9999;
+    }
+
+.bg4>.sacker4{/*右外*/
+	float:left;
+	width:80px;
+	height:150px;
+	top:9px;
+	left:485px;
+	position:absolute;
+	cursor:pointer;
+    }
+.sacker4> .head{
+    width:64px;
+	height:64px;
+    top: 18px;
+    left: 10px;
+	position:absolute;
+	background-image:url(../img/bello.jpg);
+    }
+.sacker4 > .ymsg{
+    width:232px;
+	height:24px;
+    top: 108px;
+    left:-59px;
+	position:absolute;
+	background:url(../img/ymsg.png);
+    visibility:hidden;*/
+    z-index: 9999;
+    }
+
+.bg4>.mascot3{/*吉祥物*/
+	float:left;
+	width:80px;
+	height:150px;
+	top:72px;
+	left:670px;
+	position:absolute;
+	cursor:pointer;
+    }
+.mascot3> .head{
+    width:64px;
+	height:64px;
+    top: 18px;
+    left: 12px;
+	position:absolute;
+	background-image:url(../img/bello.jpg);
+    }
+.mascot3 > .ymsg{
+    width:232px;
+	height:24px;
+    top: 108px;
+    left:-145px;
+	position:absolute;
+	background:url(../img/ymsg.png);
+    visibility:hidden;*/
+    z-index: 9999;
+    }
+
+.bg4>.user1{/*投手*/
+	float:left;
+	width:137px;
+	height:161px;
+	top:282px;
+	left:335px;
+	position:absolute;
+	cursor:pointer;
+    }
+.user1> .head{
+    width:64px;
+	height:64px;
+    top: 21px;
+    left: 23px;
+	position:absolute;
+	background-image:url(../img/bello.jpg);
+}
+
+.bg4>.lala{/*啦啦隊*/
+	float:left;
+	width:164px;
+	height:142px;
+	top:318px;
+	left:7px;
+	position:absolute;
+	cursor:pointer;
+    }
+.lala> .head{
+    width:64px;
+	height:64px;
+    top: 17px;
+    left: 48px;
+	position:absolute;
+	background-image:url(../img/bello.jpg);
+    }
+.lala > .ymsg{
+    width:232px;
+	height:24px;
+    top: 90px;
+    left:-2px;
+	position:absolute;
+	background:url(../img/ymsg.png);
+    visibility:hidden;*/
+    z-index: 9999;
+    }
+.bg4>.catch9{/*捕手*/
+	float:left;
+	width:110px;
+	height:135px;
+	top:445px;
+	left:345px;
+	position:absolute;
+	cursor:pointer;
+    }
+.catch9> .head{
+    width:64px;
+	height:64px;
+    top: 22px;
+    left: 21px;
+	position:absolute;
+	background-image:url(../img/bello.jpg);
+    }
+.catch9 > .ymsg{
+    width:232px;
+	height:24px;
+    top: 110px;
+    left:-30px;
+	position:absolute;
+	background:url(../img/ymsg.png);
+    visibility:hidden;*/
+    z-index: 9999;
+    }
+.bg4 >.coach{/*安西教練*/
+	float:left;
+	width:80px;
+	height:144px;
+	top:436px;
+	left:178px;
+	position:absolute;
+	cursor:pointer;
+	}
+.coach> .head{
+    width:64px;
+	height:64px;
+    top: 16px;
+    left: 7px;
+	position:absolute;
+	background-image:url(../img/bello.jpg);
+    }
+.coach > .ymsg{
+    width:232px;
+	height:24px;
+    top: 90px;
+    left:-100px;
+	position:absolute;
+	background:url(../img/ymsg.png);
+    visibility:hidden;*/
+    z-index: 9999;
+}
+.bg5{
+    background: url(../img/msg1.png);
+	width:760px;
+	height:580px;
+	margin:auto;
+	position:relative;	
+	}
+.mbtn{
+    background: url(../img/btn6.png);
+    width: 62px;
+    height: 61px;
+    top: 0px;
+    left: 700px;
+    position: absolute;
+    cursor:pointer;
+    }
+.bg5>.t_name{
+    width: 153px;
+    height: 35px;
+    top: 220px;
+    left: 320px;
+    padding: 10px;
+    position: absolute;
+    font-family: 微軟正黑體; 
+	font-size: 20px;
+    text-align:left; 
+}
+.bg5>.input{
+    width: 300px;
+    height: 30px;
+    top: 380px;
+    left: 215px;
+    padding: 10px;
+    position: absolute;
+    font-family: 微軟正黑體; 
+	font-size: 20px;
+    text-align:left; 
+}
+.bg5>.mbtn1{
+    background: url(../img/mbtn1.png);
+    width: 125px;
+    height: 62px;
+    top: 375px;
+    left: 530px;
+    position: absolute;
+}
+.bg6{
+    background: url(../img/msg2.png);
+	width:760px;
+	height:580px;
+	margin:auto;
+	position:relative;
+    font-family: 微軟正黑體; 
+	font-size: 18px;
+    text-align:left; 
+	}
+.bg6>.mbtn1{
+    background: url(../img/mbtn1.png);
+    width: 125px;
+    height: 62px;
+    top: 410px;
+    left: 590px;
+    position: absolute;
+}
+.bg6>.name_in{
+    width: 216px;
+    height: 20px;
+    top: 253px;
+    left: 420px;
+    position: absolute;
+    padding: 10px;    
+}
+.bg6>.tel_in{
+    width: 216px;
+    height: 20px;
+    top: 308px;
+    left: 420px;
+    position: absolute;
+    padding: 10px;    
+}
+.bg6>.mail_in{
+    width: 216px;
+    height: 20px;
+    top: 362px;
+    left: 420px;
+    position: absolute;
+    padding: 10px;    
+}
+.bg6>.check{
+    background: url(../img/mbtn2.png) no-repeat;
+    width: 28px;
+    height: 29px;
+    top: 428px;
+    left: 335px;
+    position: absolute;
+    cursor:pointer;
+}
+
+.bg6>.check a:actived{
+    background: url(../img/mbtn3.png) no-repeat;
+    width: 28px;
+    height: 29px;
+    top: 428px;
+    left: 335px;
+    position: absolute;
+    /*cursor:pointer;*/
+}
+
+/*活動辦法在這裡*/
+.inf_bg{
+    background: url(../img/inf.png) no-repeat;
+    width: 760px;
+    height: 580px;
+    margin: auto;
+    position: absolute;    
+}
+.close_{
+	background: url(../img/btn7.png);
+    width: 45px;
+    height: 45px;
+    top: 15px;
+    left: 540px;
+    position: absolute;
+    cursor: pointer;
+}
+.inf_content{
+    font-family: 微軟正黑體; 
+	font-size: 18px;
+    text-align:left; 
+    width: 316px;
+    height: 400px;
+    top: 100px;
+    left: 220px;
+    position: absolute;
+    z-index: 999;
+    overflow:auto;
+}

@@ -1,0 +1,63 @@
+@charset "utf-8";
+/* CSS Document */
+.bg{
+    background: url(../img/r-pop-bg.png) no-repeat;
+    width:760px;
+	height:580px;
+	margin:auto;
+	position:relative;	
+	}
+.mbtn{
+    background: url(../img/btn6.png);
+    width: 62px;
+    height: 61px;
+    top: 0px;
+    left: 700px;
+    position: absolute;
+    cursor:pointer;
+    }
+.pic{
+    background: url(../img/pic1.png);
+    width: 159px;
+    height: 159px;
+    top: 205px;
+    left: 235px;
+    position: absolute;
+}
+.pic_name{
+    width: 150px;
+    height: 30px;
+    top: 199px;
+    left: 399px;
+    position: absolute;
+    font-family: 微軟正黑體; 
+	font-size: 18px;
+    text-align:left; 
+    padding: 10px;
+    font-weight: bolder;
+}
+.rbtn3{
+    background: url(../img/rbtn3.png);
+    width: 102px;
+    height: 53px;
+    top: 500px;
+    left: 345px;
+    position: absolute;
+    cursor:pointer;
+    }
+.pic_role {
+    background: url(../img/pic-10.png);
+    width: 144px;
+    height: 153px;
+    top: 220px;
+    left: 400px;
+    position: absolute;
+}
+.cont_role {
+    background: url(../img/content-10.png);
+    width: 334px;
+    height: 126px;
+    top: 360px;
+    left: 227px;
+    position: absolute;
+}

@@ -1,0 +1,58 @@
+@charset "utf-8";
+/* CSS Document */
+
+#all-box {
+	height: 236px;
+	width: 406px;
+	background-image: url(images/bg.jpg);
+}
+#all-box_title {
+	font-family: Arial, Helvetica, sans-serif, "微軟正黑體";
+	font-size: 12px;
+	line-height: 18px;
+	color: #666;
+	float: left;
+	height: 80px;
+	width: 365px;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+#all-box_content {
+	font-family: Arial, Helvetica, sans-serif, "微軟正黑體";
+	font-size: 12px;
+	line-height: 18px;
+	color: #666;
+	float: left;
+	height: 111px;
+	width: 365px;
+	margin-top: 5px;
+	margin-left: 20px;
+	background-image: url(images/bg4.gif);
+}
+#movie {
+	float: left;
+	height: 73px;
+	width: 130px;
+	margin-top: 20px;
+	margin-left: 10px;
+	font-family: Arial, Helvetica, sans-serif, "微軟正黑體";
+	font-size: 12px;
+	line-height: 18px;
+	color: #333;
+}
+#movie_content {
+	float: left;
+	height: 73px;
+	width: 203px;
+	margin-top: 20px;
+	margin-left: 10px;
+	font-family: Arial, Helvetica, sans-serif, "微軟正黑體";
+	font-size: 12px;
+	line-height: 18px;
+	color: #333;
+}
+#font {
+	font-size: 16px;
+	color: #036;
+	font-weight: bold;
+}
