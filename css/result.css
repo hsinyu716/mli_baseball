@@ -29,7 +29,7 @@
 	position:absolute;
 	/*background-color: #FFF;*/
     }
-.sacker5 > .ymsg{
+.sacker5 > .ymsg{ text-align:center;
     width:232px;
 	height:24px;
     top: 100px;
@@ -57,7 +57,7 @@
 	position:absolute;
 	/*background-color: #FFF;*/
     }
-.sacker6 > .ymsg{
+.sacker6 > .ymsg{ text-align:center;
     width:232px;
 	height:24px;
     top: 110px;
@@ -84,7 +84,7 @@
 	position:absolute;
 	/*background-color: #FFF;*/
     }
-.sacker7 > .ymsg{
+.sacker7 > .ymsg{ text-align:center;
     width:232px;
 	height:24px;
     top: 115px;
@@ -112,7 +112,7 @@
 	position:absolute;
 	/*background-color: #FFF;*/
     }
-.sacker2 > .ymsg{
+.sacker2 > .ymsg{ text-align:center;
     width:232px;
 	height:24px;
     top: 108px;
@@ -140,7 +140,7 @@
 	position:absolute;
 	/*background-color: #FFF;*/
     }
-.sacker4 > .ymsg{
+.sacker4 > .ymsg{ text-align:center;
     width:232px;
 	height:24px;
     top: 108px;
@@ -168,7 +168,7 @@
 	position:absolute;
 	/*background-color: #FFF;*/
     }
-.mascot3 > .ymsg{
+.mascot3 > .ymsg{ text-align:center;
     width:232px;
 	height:24px;
     top: 108px;
@@ -214,7 +214,7 @@
 	position:absolute;
 	/*background-color: #FFF;*/
     }
-.lala > .ymsg{
+.lala > .ymsg{ text-align:center;
     width:232px;
 	height:24px;
     top: 90px;
@@ -241,7 +241,7 @@
 	position:absolute;
 	/*background-color: #FFF;*/
     }
-.catch9 > .ymsg{
+.catch9 > .ymsg{ text-align:center;
     width:232px;
 	height:24px;
     top: 110px;
@@ -268,7 +268,7 @@
 	position:absolute;
 	/*background-color: #FFF;*/
     }
-.coach > .ymsg{
+.coach > .ymsg{ text-align:center;
     width:232px;
 	height:24px;
     top: 90px;

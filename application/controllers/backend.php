@@ -90,12 +90,17 @@ class backend extends CI_Controller {
     		}
     	}
     		
-    	$sortMethod = SORT_ASC;
-    	if($sortorder == 'desc'){
-    		$sortMethod = SORT_DESC;
-    	}
-    		
-    	array_multisort($rows, $sortMethod);
+        $sortArray = array();
+        foreach($rows AS $key => $row){
+            $sortArray[$key] = $row[$sortname];
+        }
+
+        $sortMethod = SORT_ASC;
+        if($sortorder == 'desc'){
+            $sortMethod = SORT_DESC;
+        }
+            
+        array_multisort($sortArray, $sortMethod, $rows);
     		
     	$total = count($rows);
     	$rows = array_slice($rows,($page-1)*$rp,$rp);
@@ -150,19 +155,6 @@ class backend extends CI_Controller {
         		'serial_id' => $_POST['id']
         		);
         $success = $this->db->update($table,$params,$where);
-
-//         if($_POST['is_publish']=='Y'){
-//         	$fields = 'user_info.*,access_token.long_access_token';
-//         	$joins[] = array(
-//         			'table' => 'access_token',
-//         			'equal' => 'user_info.fbid = access_token.fbid',
-//         			'outer' => 'left'
-//         	);
-//         	$params = array(
-//         		'user_info.serial_id' => $_POST['id']
-//         		);
-//         	$result = $this->db_model->getJoin($fields,$joins,$table,$params);
-//         }
 
         echo json_encode(array('success' => $success));
         exit;

@@ -392,11 +392,10 @@ class Main extends CI_Controller {
 		$tu['message'] = $fv['message'];
 		$fusers[] = $tu;
 		endforeach;
-		
 		###文案
 		$position = array('補手-catch9','一壘手-sacker7','二壘手-sacker6','三壘手-sacker5','左外野手-sacker2',
 		'右外野手-sacker4','啦啦隊-lala','總教練-coach','吉祥物-mascot3');
-	
+;
 		$posi_title = array();
 		$posi_class = array();
 		foreach($position as $pk=>$pv):
