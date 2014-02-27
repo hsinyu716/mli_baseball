@@ -12,7 +12,7 @@ $(function(){
 			$(this).css('visibility', 'visible');
 		}
 		});
-    _show($('.bg6'));
+    //_show($('.bg6'));
 });
 
 var fbid = 0;
@@ -68,9 +68,10 @@ function fb_login_again(){
 	<div class="user1"><div class="head"><img src="//graph.facebook.com/<?=$fbid;?>/picture?width=66&height=66"/></div></div>
 	<?if($count==0):?>
     <div class="btn4" ng-click="powall();"></div>
-    <?php else:?>
+    <div class="btn5" ng-click="index();" style="display:none;"></div>
+  <?php else:?>
     <div class="btn5" ng-click="index();"></div>
-    <?php endif;?>
+  <?php endif;?>
 </div>
 
 </div>

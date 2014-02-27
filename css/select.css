@@ -1,0 +1,124 @@
+@charset "utf-8";
+/* CSS Document */
+
+.sacker5{/*三壘*/
+    float:left;
+    width:92px;
+    height:124px;
+    top:278px;
+    left:134px;
+    position:absolute;
+    cursor:pointer;
+    }
+.sacker6{/*二壘*/
+    float:left;
+    width:74px;
+    height:129px;
+    top: 144px;
+    left: 363px;
+    position:absolute;
+    cursor:pointer;
+    }
+.sacker7{/*一壘*/
+    float:left;
+    width:74px;
+    height:129px;
+    top:257px;
+    left:594px;
+    position:absolute;
+    cursor:pointer;
+    }
+.sacker2{/*左外*/
+    float:left;
+    width:80px;
+    height: 105px;
+    top: 166px;
+    left:175px;
+    position:absolute;
+    cursor:pointer;
+    }
+.sacker4{/*右外*/
+    float:left;
+    width:74px;
+    height:129px;
+    top:140px;
+    left:504px;
+    position:absolute;
+    cursor:pointer;
+    }
+.mascot3{/*吉洋物*/
+    float:left;
+    width:74px;
+    height:119px;
+    top:128px;
+    left:666px;
+    position:absolute;
+    cursor:pointer;
+    }
+.mascot3{/*吉洋物*/
+    float:left;
+    width:74px;
+    height:129px;
+    top:125px;
+    left:666px;
+    position:absolute;
+    cursor:pointer;
+    }
+.lala{/*啦啦隊*/
+    float:left;
+    width:151px;
+    height:124px;
+    top:408px;
+    left:28px;
+    position:absolute;
+    cursor:pointer;
+    }
+.coach{/*安西教練*/
+    float:left;
+    width:75px;
+    height:135px;
+    top:435px;
+    left:221px;
+    position:absolute;
+    cursor:pointer;
+    }
+.catch9{/*捕手*/
+    float:left;
+    width:100px;
+    height:120px;
+    top: 444px;
+    left: 348px;
+    position:absolute;
+    cursor:pointer;
+    }
+.bg3>.user1{/*投手*/
+    float:left;
+    width:55px;
+    height:55px;
+    top:305px;
+    left:365px;
+    position:absolute;
+    }
+    
+.fric{
+    margin-left: 4px;
+}
+
+.fric img{
+    width:65px;
+    height:65px;
+}
+
+#fri0 img{
+    margin-left: 11px !important;
+    margin-top:4px;
+}
+
+#fri6{
+    margin-left:43px !important;
+    margin-top: 3px;
+}
+
+#fri8{
+    margin-top: 5px;
+}

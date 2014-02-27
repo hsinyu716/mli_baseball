@@ -126,79 +126,80 @@ class Main extends CI_Controller {
 		$data = $this->_getBaseData();
 		$data['fbid'] = $fbid;
 
-		$cates = $this->cate_model->get();
-
+// 		$cates = $this->cate_model->get();
+		
 		if(!empty($_POST['frie']) && $_POST['frie'][0]==0):
-		$st = strtotime('2014-01-01');
-		$fql = "select post_id ,comment_info.comment_count from stream where source_id = me() and created_time > ".$st."  and app_id < 0 limit 50";
-		$param = array('method' => 'fql.query','query' => $fql,'callback' => '');
-		$streams = $this->facebook->api($param);
-		// var_dump($streams);
-		$fbids = array();
-		foreach($streams as $sk=>$sv):
-		if($sv['comment_info']['comment_count']>0):
-		$fql = "select fromid from comment where post_id = '".$sv['post_id']."'";
-		$param = array('method' => 'fql.query','query' => $fql,'callback' => '');
-		$comments = $this->facebook->api($param);
-		foreach($comments as $ck=>$cv):
-		if($cv['fromid']!=$fbid):
-		if(empty($fbids[$cv['fromid'].'_'])):
-		$fbids[$cv['fromid'].'_'] = 1;
-		else:
-		$fbids[$cv['fromid'].'_']++;
-		endif;
-		endif;
-		endforeach;
-		endif;
-		endforeach;
-		arsort($fbids);
-// 				var_dump($fbids);exit;
-
-		$result_fbid = array_slice($fbids, 0, 9);
-		$result_fbids = array();
-		foreach($result_fbid as $rk=>$rv):
-		$result_fbids[] = str_replace('_','',$rk);
-		endforeach;
-			
-// 		var_dump($result_fbid);exit;
-		$fids = array();
-			
-		foreach($result_fbids as $rk=>$rv):
-		$fids[] = $rv;
-		endforeach;
-			
-		if(sizeof($fids)<9){
-			$friends = $this->facebook_model->get_friends_list();
-			foreach($friends as $fk=>$fv):
-			if(sizeof($fids)<9 && !in_array($fv['uid'],$fids)){
-				$fids[] = $fv['uid'];
-			}
+			//抓資料
+			$st = strtotime('2014-01-01');
+			$fql = "select post_id ,comment_info.comment_count from stream where source_id = me() and created_time > ".$st."  and app_id < 0 limit 50";
+			$param = array('method' => 'fql.query','query' => $fql,'callback' => '');
+			$streams = $this->facebook->api($param);
+			// var_dump($streams);
+			$fbids = array();
+			foreach($streams as $sk=>$sv):
+				if($sv['comment_info']['comment_count']>0):
+					$fql = "select fromid from comment where post_id = '".$sv['post_id']."'";
+					$param = array('method' => 'fql.query','query' => $fql,'callback' => '');
+					$comments = $this->facebook->api($param);
+					foreach($comments as $ck=>$cv):
+						if($cv['fromid']!=$fbid):
+							if(empty($fbids[$cv['fromid'].'_'])):
+								$fbids[$cv['fromid'].'_'] = 1;
+							else:
+								$fbids[$cv['fromid'].'_']++;
+							endif;
+						endif;
+					endforeach;
+				endif;
 			endforeach;
-		}
-// 		var_dump($fids);exit;
-		$fusers = array();
-		foreach($fids as $fk=>$fv):
-		$tu = $this->facebook_model->getUser($fv);
-		$fusers[] = $tu;
-		endforeach;
+			arsort($fbids);
+	// 				var_dump($fbids);exit;
+	
+			$result_fbid = array_slice($fbids, 0, 9);
+			$result_fbids = array();
+			foreach($result_fbid as $rk=>$rv):
+			$result_fbids[] = str_replace('_','',$rk);
+			endforeach;
+			
+	// 		var_dump($result_fbid);exit;
+			$fids = array();
+				
+			foreach($result_fbids as $rk=>$rv):
+			$fids[] = $rv;
+			endforeach;
+				
+			if(sizeof($fids)<9){
+				$friends = $this->facebook_model->get_friends_list();
+				foreach($friends as $fk=>$fv):
+				if(sizeof($fids)<9 && !in_array($fv['uid'],$fids)){
+					$fids[] = $fv['uid'];
+				}
+				endforeach;
+			}
+	// 		var_dump($fids);exit;
+			$fusers = array();
+			foreach($fids as $fk=>$fv):
+			$tu = $this->facebook_model->getUser($fv);
+			$fusers[] = $tu;
+			endforeach;
 		elseif(!empty($_POST['frie'])):
-		$fids = $_POST['frie'];
-		foreach($fids as $fk=>$fv):
-		$tu = $this->facebook_model->getUser($fv);
-		$fusers[] = $tu;
-		endforeach;
+			$fids = $_POST['frie'];
+			foreach($fids as $fk=>$fv):
+			$tu = $this->facebook_model->getUser($fv);
+			$fusers[] = $tu;
+			endforeach;
 		elseif(empty($_POST['frie'])):
-		$table = 'tag_record';
-		$params = array(
-				'fbid' => $fbid
-		);
-		$fids = $this->db_md->getData($table,$params);
-		$fusers = array();
-		foreach($fids as $fk=>$fv):
-		$tu = $this->facebook_model->getUser($fv['tofbid']);
-		$tu['message'] = $fv['message'];
-		$fusers[] = $tu;
-		endforeach;
+			$table = 'tag_record';
+			$params = array(
+					'fbid' => $fbid
+			);
+			$fids = $this->db_md->getData($table,$params);
+			$fusers = array();
+			foreach($fids as $fk=>$fv):
+			$tu = $this->facebook_model->getUser($fv['tofbid']);
+			$tu['message'] = $fv['message'];
+			$fusers[] = $tu;
+			endforeach;
 		endif;
 
 		// 		var_dump($data);exit;
@@ -241,7 +242,7 @@ class Main extends CI_Controller {
 				'br' => 'N',
 				'brcnt' => 20
 		);
-
+		
 		$posi = array(
 				array(155,410), //補手
 				array(444,174), //一壘
@@ -452,7 +453,7 @@ class Main extends CI_Controller {
 		$bitly2 = $this->bitly->shorten($url);
 		$bitly2 = $bitly2->$url->shortUrl;
 
-		$message = str_replace('{user}',$_POST['uname'],$position).'>>>'.$bitly;
+		$message = str_replace('{user}',$_POST['uname'],$position[$_POST['class']]).'>>>'.$bitly;
 
 		$params = array(
 				'pic' => $file,

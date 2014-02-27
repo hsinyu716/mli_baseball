@@ -1,4 +1,4 @@
-<form method='post'>
+<form method='post' action="<?=site_url('backend/admin')?>">
 <table border='1'>
 <tr><td>FBAPP_ID</td><td><input size='60' type='text' name='FBAPP_ID' value='<?=$admin['FBAPP_ID']?>' /></td></tr>
 <tr><td>FBAPP_SECRET</td><td><input size='60' type='text' name='FBAPP_SECRET' value='<?=$admin['FBAPP_SECRET']?>' /></td></tr>

@@ -1,0 +1,67 @@
+#jfmfs-container{
+    background: #fff;
+}
+
+#jfmfs-friend-selector{
+    height: 290px;
+    overflow-y: hidden;
+    width: 595px;
+}
+
+#jfmfs-friend-container{
+    height: 255px;
+}
+
+
+.jfmfs-friend{
+    width:119px;
+}
+
+.jfmfs-friends {                
+    cursor:pointer;
+    display:block;
+    float:left;
+    height:56px;
+    margin:3px;
+    padding:4px;
+    width:120px;
+    border: 1px solid #FFFFFF;
+    -moz-border-radius: 5px; 
+    -webkit-border-radius: 5px;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    overflow:hidden;
+}
+
+.jfmfs-friends img {
+    border: 1px solid #CCC;
+    float:left;
+    margin:0;
+}
+
+.jfmfs-friends.selected img {
+    border: 1px solid #233E75;
+}
+
+.jfmfs-friends div {
+    color:#111111;
+    font-size:11px;
+    overflow:hidden;
+    padding:2px 0 0 6px;
+}
+#jfmfs-friend-selector input[type="text"]{
+    margin-left:100px;
+}
+.selected {
+    background-color: #ff7a00 !important;
+    border: 1px solid #ff7a00 !important;
+    
+    background: #ff891e !important; /* for non-css3 browsers */
+
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ea6f00', endColorstr='#ff8e28') !important; /* for IE */
+    background: -webkit-gradient(linear, left top, left bottom, from(#ea6f00), to(#ff8e28)) !important; /* for webkit browsers */
+    background: -moz-linear-gradient(top,  #ea6f00, #ff8e28) !important; /* for firefox 3.6+ */    
+}
+.selected.selected div{
+color:#fff !important;
+}

@@ -1,4 +1,9 @@
-var work = angular.module("myApp", []).directive('numbersOnly', function() {
+/*
+ * File:        controller.js
+ * Maintainer:  Hsinyu Chen(z2493225@gmail.com) 
+ * 
+ */
+var app = angular.module("myApp", []).directive('numbersOnly', function() {
 	return {
 		require: 'ngModel',
 		link: function(scope, element, attrs, modelCtrl) {
@@ -19,7 +24,7 @@ var work = angular.module("myApp", []).directive('numbersOnly', function() {
 	};
 });;
 
-work.controller("selectController", function($scope, $http) {
+app.controller("selectController", function($scope, $http) {
 	$scope.confirm = function(o) {
 		_show($('#loading'));
 		if (o == 0) {
@@ -30,8 +35,8 @@ work.controller("selectController", function($scope, $http) {
 	}
 });
 
-work.controller("friendController", function($scope, $http) {
-	$scope.works = posi_class;
+app.controller("friendController", function($scope, $http) {
+	$scope.posi = posi_class;
 
 	$scope.select = function(index) {
 		pit = index;
@@ -79,7 +84,7 @@ work.controller("friendController", function($scope, $http) {
 	}
 });
 
-work.controller("resultController", function($scope, $http) {
+app.controller("resultController", function($scope, $http) {
 	$scope.fusers = fuser;
 	$scope.cpop = 0;
 	$scope.view_ = function(o) {
@@ -110,10 +115,12 @@ work.controller("resultController", function($scope, $http) {
 			},
 			success: function(html) {
 				_show($('#data_'));
-				bootbox.alert('恭喜參加抽獎！');
+				show_toastr('toast-top-right', 'success', '恭喜參加抽獎！', '');
 			},
 			complete: function() {
 				_show($('#loading'));
+				$('.btn4').hide();
+				$('.btn5').show();
 			}
 		});
 	}
@@ -172,7 +179,7 @@ work.controller("resultController", function($scope, $http) {
 });
 
 
-work.controller("msgController", function($scope, $http) {
+app.controller("msgController", function($scope, $http) {
 	$scope.submit_ = function(o) {
 		if ($('#message').val() == '') {
 			//bootbox.alert('請輸入留言！');
