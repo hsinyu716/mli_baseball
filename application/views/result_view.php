@@ -7,12 +7,13 @@ var shareurl = '<?= site_url('main/share') ?>';
 var count = <?=$count;?>;
 
 $(function(){
-	$.each($('.ymsg'),function(){
-		if($(this).text().length>0){
-			$(this).css('visibility', 'visible');
-		}
-		});
+  $.each($('.ymsg'),function(){
+    if($(this).text().length>0){
+      $(this).css('visibility', 'visible');
+    }
+  });
     //_show($('.bg6'));
+  bootbox.alert('點擊大頭照可以看到詳細內容以及分享唷！');
 });
 
 var fbid = 0;
@@ -49,8 +50,8 @@ function fb_login_again(){
 </div>
 
 <!-- 角色popup -->
-<div class="bg" style="display:none;">
- <div class="mbtn" onclick="javascript:_show($('.bg'));"></div>
+<div class="bg" style="display:none;width:740px;">
+ <div class="mbtn" onclick="javascript:_show($('.bg'));" style="left:670px;"></div>
     <div class="pic" style="background:url({{ pop_pic }});"></div>
     <div class="pic_name">{{ pop_pic_name }}</div>
     <div class="pic_role" style="background:url({{ pop_pic_role }});"></div>
@@ -63,10 +64,10 @@ function fb_login_again(){
    <div class="inf"></div>
    <div class="tittle"><div class="t_name"><?=$user['name']?></div></div>
    <div ng-repeat="user in fusers" sn="{{ $index }}">
-		<div class="{{user.class}}" ng-click="view_($index);"><div class="head"><img src="//graph.facebook.com/{{ user.uid }}/picture?width=64&height=64" width="64" height="64" /></div><div class="ymsg">{{user.message}}</div></div>
-	</div>
-	<div class="user1"><div class="head"><img src="//graph.facebook.com/<?=$fbid;?>/picture?width=66&height=66"/></div></div>
-	<?if($count==0):?>
+    <div class="{{user.class}}" ng-click="view_($index);"><div class="head"><img src="//graph.facebook.com/{{ user.uid }}/picture?width=64&height=64" width="64" height="64" /></div><div class="ymsg">{{user.message}}</div></div>
+  </div>
+  <div class="user1"><div class="head"><img src="//graph.facebook.com/<?=$fbid;?>/picture?width=66&height=66"/></div></div>
+  <?if($count==0):?>
     <div class="btn4" ng-click="powall();"></div>
     <div class="btn5" ng-click="index();" style="display:none;"></div>
   <?php else:?>

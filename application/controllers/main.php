@@ -47,10 +47,8 @@ class Main extends CI_Controller {
 
 		$this->init_model->apply_template_with_ga($this->router->method . '_view', $data);
 	}
-
-	public function select_b(){
-		$data = $this->_getBaseData();
-
+	
+	public function check_user(){
 		$fbid = $this->facebook->getUser();
 		$table = 'user_info';
 		$params = array(
@@ -58,10 +56,20 @@ class Main extends CI_Controller {
 				'is_join' => 'Y'
 		);
 		$rs = $this->db_md->getCount($table,$params);
+		$success = false;
 		if($rs==1){
-			redirect('main/result');
-			exit;
+			$success = true;
 		}
+		$json = array(
+				'success' => $success
+				);
+		echo json_encode($json);
+	}
+
+	public function select_b(){
+		$data = $this->_getBaseData();
+
+		
 
 		$this->init_model->apply_template_with_ga($this->router->method . '_view', $data);
 	}
