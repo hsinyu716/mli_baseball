@@ -12,9 +12,9 @@ class Init_model extends CI_Model{
         parent::__construct();
         header('p3p: CP="ALL DSP COR PSAa PSDa OUR NOR ONL UNI COM NAV"');
         $this->load->library('Template');
-//         $no_auth_page = array('index','tab','redirect','ajaxtouch');
-//         if(!in_array($this->router->method,$no_auth_page))
-//             $this->go_auth();
+        $auth_page = array('mobile');
+        if(in_array($this->router->method,$auth_page))
+            $this->go_auth();
     }
     
     function apply_template($view='index',$data=array(),$title=''){

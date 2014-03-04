@@ -52,8 +52,9 @@ class Facebook_model extends CI_Model {
         }
 
         $_SESSION['is_mobile'] = 'N';
-        if (strstr($_SERVER['HTTP_USER_AGENT'], 'iPod') || stripos(strtolower($_SERVER['HTTP_USER_AGENT']), 'android') !== false) {
+        if (strstr($_SERVER['HTTP_USER_AGENT'], 'iPod') || strstr($_SERVER['HTTP_USER_AGENT'], 'iPhone') || stripos(strtolower($_SERVER['HTTP_USER_AGENT']), 'android') !== false) {
             $_SESSION['is_mobile'] = 'Y';
+//             var_dump($_SESSION['is_mobile']);
         }
 
         $fb_data = array(

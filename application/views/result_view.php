@@ -13,7 +13,7 @@ $(function(){
     }
   });
     //_show($('.bg6'));
-  bootbox.alert('點擊大頭照可以看到詳細內容以及分享唷！');
+  bootbox.alert('點擊大頭照，看看誰是你的最佳戰友!');
 });
 
 var fbid = 0;

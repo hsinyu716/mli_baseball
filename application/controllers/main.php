@@ -48,6 +48,11 @@ class Main extends CI_Controller {
 		$this->init_model->apply_template_with_ga($this->router->method . '_view', $data);
 	}
 	
+	public function mobile(){
+		$data = $this->_getBaseData();
+		$this->init_model->apply_template_with_ga($this->router->method . '_view', $data);
+	}
+	
 	public function check_user(){
 		$fbid = $this->facebook->getUser();
 		$table = 'user_info';
